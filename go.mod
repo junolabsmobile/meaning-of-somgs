@@ -1,4 +1,4 @@
-module github.com/junolabsmobile/meaning-of-somgs
+module github.com/junolabsmobile/meaning-of-songs
 
 go 1.20
 

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**meaning-of-somgs** is an interactive app to discover the meaning of songs. Monolith with Go backend and React frontend.
+**meaning-of-songs** is an interactive app to discover the meaning of songs. Monolith with Go backend and React frontend.
 
 ## Tech Stack
 

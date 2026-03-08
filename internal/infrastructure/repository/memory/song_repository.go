@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/junolabsmobile/meaning-of-somgs/internal/domain"
+	"github.com/junolabsmobile/meaning-of-songs/internal/domain"
 )
 
 // SongRepository es un adaptador in-memory para el puerto domain.SongRepository.

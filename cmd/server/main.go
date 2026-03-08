@@ -4,9 +4,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/junolabsmobile/meaning-of-somgs/internal/application"
-	httpinfra "github.com/junolabsmobile/meaning-of-somgs/internal/infrastructure/http"
-	"github.com/junolabsmobile/meaning-of-somgs/internal/infrastructure/repository/memory"
+	"github.com/junolabsmobile/meaning-of-songs/internal/application"
+	httpinfra "github.com/junolabsmobile/meaning-of-songs/internal/infrastructure/http"
+	"github.com/junolabsmobile/meaning-of-songs/internal/infrastructure/repository/memory"
 )
 
 func main() {

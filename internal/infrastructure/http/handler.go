@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/go-chi/chi/v5"
-	"github.com/junolabsmobile/meaning-of-somgs/internal/application"
+	"github.com/junolabsmobile/meaning-of-songs/internal/application"
 )
 
 type Handler struct {

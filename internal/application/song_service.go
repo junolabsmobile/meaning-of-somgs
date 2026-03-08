@@ -3,7 +3,7 @@ package application
 import (
 	"context"
 
-	"github.com/junolabsmobile/meaning-of-somgs/internal/domain"
+	"github.com/junolabsmobile/meaning-of-songs/internal/domain"
 )
 
 // SongService implementa los casos de uso de la aplicación.
