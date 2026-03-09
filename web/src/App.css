@@ -1,17 +1,232 @@
-.App {
-  max-width: 800px;
+/* App layout */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1rem 1.5rem;
+}
+
+.app-header__inner {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.app-header__title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Main content */
+.app-main {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Status messages */
+.app-status {
   text-align: center;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 1.1rem;
+  opacity: 0.7;
+  margin-top: 4rem;
 }
 
-h1 {
-  font-size: 3rem;
-  color: #333;
+.app-status--error {
+  color: #e85b4b;
+  opacity: 1;
 }
 
-p {
-  font-size: 1.2rem;
-  color: #666;
+/* Search bar */
+.search-bar {
+  flex: 1;
+  min-width: 200px;
+}
+
+.search-bar__input {
+  width: 100%;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.07);
+  color: inherit;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.search-bar__input::placeholder {
+  opacity: 0.45;
+}
+
+.search-bar__input:focus {
+  border-color: var(--color-accent);
+}
+
+/* Song grid */
+.song-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Song card */
+.song-card {
+  background-color: var(--color-surface);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.4rem 1.6rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.song-card:hover,
+.song-card:focus-visible {
+  transform: translateY(-3px);
+  border-color: var(--color-accent);
+  box-shadow: 0 6px 20px rgba(232, 184, 75, 0.15);
+  outline: none;
+}
+
+.song-card__artist {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  margin: 0 0 0.4rem;
+}
+
+.song-card__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+  line-height: 1.3;
+}
+
+.song-card__excerpt {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  opacity: 0.65;
+  margin: 0;
+}
+
+/* Song detail */
+.song-detail {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.song-detail__back {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: inherit;
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.song-detail__back:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.song-detail__artist {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--color-accent);
+  margin: 0 0 0.5rem;
+}
+
+.song-detail__title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin: 0 0 2.5rem;
+  line-height: 1.15;
+}
+
+.song-detail__section {
+  margin-bottom: 2rem;
+}
+
+.song-detail__section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(232, 184, 75, 0.3);
+}
+
+.song-detail__text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  opacity: 0.85;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .song-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app-header__inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .app-header__title {
+    text-align: center;
+  }
+}
+
+/* Light mode overrides */
+@media (prefers-color-scheme: light) {
+  .song-card {
+    background-color: #f5f5f5;
+    border-color: rgba(0, 0, 0, 0.08);
+  }
+
+  .song-card:hover,
+  .song-card:focus-visible {
+    border-color: var(--color-accent);
+    box-shadow: 0 6px 20px rgba(232, 184, 75, 0.2);
+  }
+
+  .app-header {
+    background-color: #efefef;
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .search-bar__input {
+    background-color: #fff;
+    border-color: rgba(0, 0, 0, 0.2);
+    color: #213547;
+  }
 }
