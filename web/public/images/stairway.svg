@@ -1,0 +1,88 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#06021a"/>
+      <stop offset="60%" stop-color="#1a0a3e"/>
+      <stop offset="100%" stop-color="#2d1b55"/>
+    </linearGradient>
+    <linearGradient id="cloud-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff5c0"/>
+      <stop offset="100%" stop-color="#e8b84b"/>
+    </linearGradient>
+    <radialGradient id="glow-grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f5d060" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#f5d060" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur-soft">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="400" height="300" fill="url(#sky-grad)"/>
+
+  <!-- Stars -->
+  <circle cx="40" cy="25" r="1.2" fill="white" opacity="0.9"/>
+  <circle cx="100" cy="15" r="0.8" fill="white" opacity="0.7"/>
+  <circle cx="165" cy="28" r="1.4" fill="white" opacity="0.8"/>
+  <circle cx="240" cy="12" r="1" fill="white" opacity="0.6"/>
+  <circle cx="310" cy="22" r="1.2" fill="white" opacity="0.85"/>
+  <circle cx="360" cy="10" r="0.9" fill="white" opacity="0.7"/>
+  <circle cx="70" cy="50" r="0.7" fill="white" opacity="0.5"/>
+  <circle cx="330" cy="45" r="0.8" fill="white" opacity="0.6"/>
+  <circle cx="20" cy="70" r="1" fill="white" opacity="0.4"/>
+
+  <!-- Golden glow behind clouds -->
+  <ellipse cx="200" cy="70" rx="150" ry="60" fill="url(#glow-grad)" filter="url(#blur-soft)"/>
+
+  <!-- Clouds - back layer -->
+  <ellipse cx="180" cy="78" rx="110" ry="32" fill="#f0c840" opacity="0.6"/>
+  <ellipse cx="230" cy="72" rx="95" ry="28" fill="#f5d060" opacity="0.55"/>
+
+  <!-- Clouds - front layer -->
+  <ellipse cx="160" cy="85" rx="75" ry="25" fill="#fff0a0" opacity="0.85"/>
+  <ellipse cx="210" cy="80" rx="90" ry="28" fill="#ffe878" opacity="0.9"/>
+  <ellipse cx="255" cy="82" rx="70" ry="22" fill="#fff0a0" opacity="0.8"/>
+
+  <!-- Light rays from clouds -->
+  <line x1="195" y1="100" x2="155" y2="215" stroke="#f5d060" stroke-width="2" opacity="0.2"/>
+  <line x1="200" y1="100" x2="185" y2="230" stroke="#f5d060" stroke-width="2.5" opacity="0.3"/>
+  <line x1="205" y1="100" x2="210" y2="240" stroke="#f5d060" stroke-width="2.5" opacity="0.28"/>
+  <line x1="210" y1="100" x2="240" y2="220" stroke="#f5d060" stroke-width="2" opacity="0.2"/>
+  <line x1="185" y1="100" x2="130" y2="230" stroke="#f5d060" stroke-width="1.5" opacity="0.15"/>
+  <line x1="220" y1="100" x2="270" y2="215" stroke="#f5d060" stroke-width="1.5" opacity="0.15"/>
+
+  <!-- Stone staircase -->
+  <g fill="#3a2a5a" stroke="#5a4a7a" stroke-width="0.8">
+    <rect x="45" y="258" width="90" height="16" rx="2"/>
+    <rect x="62" y="242" width="82" height="17" rx="2"/>
+    <rect x="78" y="226" width="76" height="17" rx="2"/>
+    <rect x="94" y="211" width="70" height="16" rx="2"/>
+    <rect x="108" y="196" width="65" height="16" rx="2"/>
+    <rect x="121" y="181" width="60" height="16" rx="2"/>
+    <rect x="133" y="167" width="56" height="15" rx="2"/>
+    <rect x="143" y="153" width="52" height="15" rx="2"/>
+    <rect x="152" y="139" width="50" height="15" rx="2"/>
+    <rect x="160" y="126" width="47" height="14" rx="2"/>
+    <rect x="167" y="113" width="44" height="14" rx="2"/>
+    <rect x="173" y="101" width="42" height="13" rx="2"/>
+  </g>
+
+  <!-- Step top highlights (golden shimmer) -->
+  <g opacity="0.5">
+    <rect x="45" y="258" width="90" height="3" fill="#f5d060" rx="1"/>
+    <rect x="62" y="242" width="82" height="3" fill="#f5d060" rx="1"/>
+    <rect x="78" y="226" width="76" height="3" fill="#f5d060" rx="1"/>
+    <rect x="94" y="211" width="70" height="3" fill="#f5d060" rx="1"/>
+    <rect x="108" y="196" width="65" height="3" fill="#f5d060" rx="1"/>
+    <rect x="121" y="181" width="60" height="3" fill="#f5d060" rx="1"/>
+    <rect x="133" y="167" width="56" height="3" fill="#f5d060" rx="1"/>
+  </g>
+
+  <!-- Sparkles near clouds -->
+  <g fill="#fff" opacity="0.9">
+    <polygon points="200,58 202,64 208,64 203,68 205,74 200,70 195,74 197,68 192,64 198,64" transform="scale(0.5) translate(200,50)"/>
+    <polygon points="240,52 241,56 245,56 242,59 243,63 240,61 237,63 238,59 235,56 239,56" transform="scale(0.6) translate(120,30)"/>
+    <polygon points="160,55 161,59 165,59 162,62 163,66 160,64 157,66 158,62 155,59 159,59" transform="scale(0.5) translate(50,35)"/>
+  </g>
+</svg>

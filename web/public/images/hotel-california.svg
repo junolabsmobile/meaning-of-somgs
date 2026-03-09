@@ -1,0 +1,104 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="night-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#020510"/>
+      <stop offset="100%" stop-color="#0d1230"/>
+    </linearGradient>
+    <linearGradient id="hotel-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1f40"/>
+      <stop offset="100%" stop-color="#1a1230"/>
+    </linearGradient>
+    <radialGradient id="neon-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff4488" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ff4488" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="neon-blur">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <!-- Night sky -->
+  <rect width="400" height="300" fill="url(#night-sky)"/>
+
+  <!-- Stars -->
+  <circle cx="30" cy="20" r="1" fill="white" opacity="0.8"/>
+  <circle cx="70" cy="35" r="0.7" fill="white" opacity="0.6"/>
+  <circle cx="110" cy="15" r="1.2" fill="white" opacity="0.9"/>
+  <circle cx="150" cy="30" r="0.8" fill="white" opacity="0.5"/>
+  <circle cx="320" cy="18" r="1.1" fill="white" opacity="0.85"/>
+  <circle cx="360" cy="28" r="0.9" fill="white" opacity="0.7"/>
+  <circle cx="385" cy="12" r="1" fill="white" opacity="0.6"/>
+  <circle cx="290" cy="40" r="0.7" fill="white" opacity="0.5"/>
+  <circle cx="340" cy="55" r="0.8" fill="white" opacity="0.6"/>
+  <circle cx="50" cy="60" r="0.6" fill="white" opacity="0.4"/>
+
+  <!-- Moon -->
+  <circle cx="340" cy="35" r="18" fill="#d4c870" opacity="0.9"/>
+  <circle cx="348" cy="30" r="14" fill="#0d1230" opacity="0.85"/>
+
+  <!-- Hotel building - main body -->
+  <rect x="80" y="90" width="240" height="185" fill="url(#hotel-wall)" rx="2"/>
+
+  <!-- Hotel facade details - columns -->
+  <rect x="90" y="90" width="12" height="185" fill="#221835" opacity="0.8"/>
+  <rect x="150" y="90" width="10" height="185" fill="#221835" opacity="0.6"/>
+  <rect x="215" y="90" width="10" height="185" fill="#221835" opacity="0.6"/>
+  <rect x="298" y="90" width="12" height="185" fill="#221835" opacity="0.8"/>
+
+  <!-- Windows - row 1 -->
+  <g fill="#ffe8b0" opacity="0.85">
+    <rect x="110" y="110" width="25" height="20" rx="3"/>
+    <rect x="165" y="110" width="25" height="20" rx="3"/>
+    <rect x="220" y="110" width="25" height="20" rx="3"/>
+    <rect x="265" y="110" width="25" height="20" rx="3"/>
+  </g>
+  <!-- Windows - row 2 -->
+  <g fill="#ffcc70" opacity="0.7">
+    <rect x="110" y="148" width="25" height="20" rx="3"/>
+    <rect x="165" y="148" width="25" height="20" rx="3"/>
+    <rect x="220" y="148" width="25" height="20" rx="3"/>
+    <rect x="265" y="148" width="25" height="20" rx="3"/>
+  </g>
+  <!-- Windows - row 3 (dark/off) -->
+  <g fill="#1a1035" opacity="0.9">
+    <rect x="110" y="185" width="25" height="20" rx="3" stroke="#443060" stroke-width="1"/>
+    <rect x="165" y="185" width="25" height="20" rx="3" stroke="#443060" stroke-width="1"/>
+    <rect x="220" y="185" width="25" height="20" rx="3" stroke="#ffe8b0" stroke-width="1"/>
+    <rect x="265" y="185" width="25" height="20" rx="3" stroke="#443060" stroke-width="1"/>
+  </g>
+
+  <!-- Hotel entrance arch -->
+  <path d="M 155 275 L 155 230 Q 200 210 245 230 L 245 275 Z" fill="#120d20"/>
+  <path d="M 162 275 L 162 235 Q 200 218 238 235 L 238 275 Z" fill="#1e1535"/>
+
+  <!-- Neon sign glow -->
+  <ellipse cx="200" cy="95" rx="90" ry="18" fill="url(#neon-glow)" filter="url(#neon-blur)"/>
+
+  <!-- Neon sign text box -->
+  <rect x="118" y="82" width="164" height="26" rx="4" fill="#1a0d30" stroke="#ff4488" stroke-width="1.5"/>
+
+  <!-- Neon sign text "HOTEL CALIFORNIA" simplified as styled lines -->
+  <text x="200" y="100" text-anchor="middle" font-family="serif" font-size="13" font-weight="bold" fill="#ff4488" letter-spacing="1">HOTEL</text>
+  <!-- Small subtitle -->
+  <rect x="148" y="112" width="104" height="14" rx="2" fill="#1a0d30" stroke="#ff88cc" stroke-width="0.8"/>
+  <text x="200" y="123" text-anchor="middle" font-family="serif" font-size="8" fill="#ff88cc" letter-spacing="2">CALIFORNIA</text>
+
+  <!-- Palm trees -->
+  <!-- Left palm -->
+  <rect x="55" y="200" width="8" height="75" fill="#1a2010" rx="3"/>
+  <ellipse cx="59" cy="200" rx="28" ry="12" fill="#1e3015" transform="rotate(-20 59 200)"/>
+  <ellipse cx="59" cy="200" rx="28" ry="12" fill="#1e3015" transform="rotate(10 59 200)"/>
+  <ellipse cx="59" cy="200" rx="28" ry="12" fill="#243818" transform="rotate(40 59 200)"/>
+  <ellipse cx="59" cy="200" rx="25" ry="10" fill="#2a4020" transform="rotate(-50 59 200)"/>
+
+  <!-- Right palm -->
+  <rect x="340" y="210" width="8" height="65" fill="#1a2010" rx="3"/>
+  <ellipse cx="344" cy="210" rx="26" ry="11" fill="#1e3015" transform="rotate(15 344 210)"/>
+  <ellipse cx="344" cy="210" rx="26" ry="11" fill="#243818" transform="rotate(-15 344 210)"/>
+  <ellipse cx="344" cy="210" rx="22" ry="9" fill="#2a4020" transform="rotate(50 344 210)"/>
+  <ellipse cx="344" cy="210" rx="22" ry="9" fill="#1e3015" transform="rotate(-50 344 210)"/>
+
+  <!-- Ground/road -->
+  <rect x="0" y="272" width="400" height="28" fill="#0a0a15"/>
+  <rect x="160" y="272" width="80" height="28" fill="#100a20"/>
+</svg>

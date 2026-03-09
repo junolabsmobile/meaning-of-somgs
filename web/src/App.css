@@ -190,6 +190,269 @@
   margin: 0;
 }
 
+/* Nav tabs */
+.app-nav {
+  display: flex;
+  gap: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 0.25rem;
+}
+
+.app-nav__tab {
+  background: transparent;
+  border: none;
+  color: inherit;
+  padding: 0.4rem 1rem;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: inherit;
+  font-weight: 500;
+  opacity: 0.6;
+  transition: background-color 0.2s, opacity 0.2s;
+  white-space: nowrap;
+}
+
+.app-nav__tab:hover {
+  opacity: 0.85;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.app-nav__tab--active {
+  background-color: var(--color-accent);
+  color: #1a1200;
+  opacity: 1;
+  font-weight: 700;
+}
+
+.app-nav__tab--active:hover {
+  background-color: var(--color-accent);
+  opacity: 1;
+}
+
+/* Games hub */
+.games-hub {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.games-hub__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 2rem;
+  opacity: 0.9;
+}
+
+.games-hub__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.game-card {
+  background-color: var(--color-surface);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 2rem 1.8rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  text-align: left;
+  user-select: none;
+}
+
+.game-card:hover,
+.game-card:focus-visible {
+  transform: translateY(-3px);
+  border-color: var(--color-accent);
+  box-shadow: 0 6px 20px rgba(232, 184, 75, 0.15);
+  outline: none;
+}
+
+.game-card--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.game-card--disabled:hover {
+  transform: none;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+
+.game-card__icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.game-card__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 0.6rem;
+}
+
+.game-card__desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.65;
+  margin: 0;
+}
+
+.game-card__loading {
+  font-size: 0.8rem;
+  opacity: 0.5;
+  margin: 0.75rem 0 0;
+  font-style: italic;
+}
+
+/* Quiz container */
+.quiz {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.quiz__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.quiz__round {
+  font-weight: 600;
+}
+
+.quiz__score-inline {
+  font-weight: 500;
+}
+
+.quiz__question {
+  margin-bottom: 1.75rem;
+}
+
+.quiz__excerpt {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  font-style: italic;
+  opacity: 0.88;
+  margin: 0;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.04);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 0 8px 8px 0;
+}
+
+.quiz__image {
+  width: 100%;
+  max-height: 260px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: rgba(0, 0, 0, 0.2);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.quiz__prompt {
+  font-size: 1rem;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.quiz__options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.quiz__option {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: inherit;
+  padding: 0.85rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-family: inherit;
+  text-align: left;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.quiz__option:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.quiz__option:disabled {
+  cursor: default;
+}
+
+.quiz__option--correct {
+  background-color: rgba(80, 200, 80, 0.2) !important;
+  border-color: #50c850 !important;
+  color: #80e880;
+  font-weight: 600;
+}
+
+.quiz__option--wrong {
+  background-color: rgba(220, 70, 70, 0.2) !important;
+  border-color: #dc4646 !important;
+  color: #f08080;
+}
+
+.quiz__feedback {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.25rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  opacity: 0.9;
+}
+
+.quiz__next {
+  background-color: var(--color-accent);
+  color: #1a1200;
+  border: none;
+  padding: 0.7rem 1.6rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-family: inherit;
+  font-weight: 700;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.quiz__next:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.quiz__score {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.quiz__score-emoji {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.quiz__score h2 {
+  font-size: 1.8rem;
+  margin: 0 0 0.75rem;
+}
+
+.quiz__score-result {
+  font-size: 1.3rem;
+  opacity: 0.8;
+  margin: 0 0 2rem;
+}
+
 /* Responsive */
 @media (max-width: 600px) {
   .song-grid {
@@ -203,6 +466,18 @@
 
   .app-header__title {
     text-align: center;
+  }
+
+  .app-nav {
+    justify-content: center;
+  }
+
+  .games-hub__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quiz__image {
+    max-height: 200px;
   }
 }
 
@@ -228,5 +503,47 @@
     background-color: #fff;
     border-color: rgba(0, 0, 0, 0.2);
     color: #213547;
+  }
+
+  .app-nav {
+    background-color: rgba(0, 0, 0, 0.06);
+  }
+
+  .app-nav__tab:hover {
+    background-color: rgba(0, 0, 0, 0.07);
+  }
+
+  .game-card {
+    background-color: #f5f5f5;
+    border-color: rgba(0, 0, 0, 0.08);
+  }
+
+  .game-card:hover,
+  .game-card:focus-visible {
+    border-color: var(--color-accent);
+    box-shadow: 0 6px 20px rgba(232, 184, 75, 0.2);
+  }
+
+  .quiz__excerpt {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+
+  .quiz__option {
+    background-color: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.12);
+  }
+
+  .quiz__option:hover:not(:disabled) {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .quiz__image {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .quiz__feedback {
+    background-color: rgba(0, 0, 0, 0.04);
   }
 }
